@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>After Class Project - 22</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    </head>
+    <body>
+      <header>
+            <h2 class="logo">ACP 22</h2>
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">Category</a>
+                <a href="#">Class</a>
+                <button class="btnLogin-popup">Dashboard</button>
+            </nav>
+      </header>
+
+<main>
+  <div class="result-box" id="resultBox">
+    <!-- Results will be displayed here -->
+  </div>
+</main>
+
+<script>
+  // Generate a random set of numbers
+  const randomNumbers = [];
+  for (let i = 0; i < 5; i++) {
+    randomNumbers.push(Math.floor(Math.random() * 100));
+  }
+
+  // Get current date
+  const currentDate = new Date().toLocaleString();
+
+  // Generate and round a random number
+  const randomFloat = Math.random() * 100;
+  const roundedRandom = Math.round(randomFloat);
+
+  // Display results
+  document.getElementById('resultBox').innerHTML = `
+    <h4>Random Numbers: ${randomNumbers.join(', ')}</h4>
+    <h4>Current Date: ${currentDate}</h4>
+    <h4>Rounded Random Number: ${roundedRandom}</h4>
+  `;
+</script>
+</body>
+</html>
